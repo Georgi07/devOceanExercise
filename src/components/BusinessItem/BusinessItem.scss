@@ -1,0 +1,89 @@
+@mixin informationTextStyle {
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.container {
+  background-color: #f8f8fa;
+  padding-top: 40px;
+
+  img {
+    object-fit: cover;
+    margin: 0 auto;
+    width: 90%;
+    height: 300px;
+  }
+
+  .information {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px auto;
+
+    .address,
+    .contact {
+      text-align: left;
+      p {
+        @include informationTextStyle;
+      }
+    }
+
+    .nearbyPlaces {
+      width: 50%;
+      background-color: #fff;
+      text-align: left;
+      padding: 0px 30px 30px 30px;
+
+      ul {
+        @include informationTextStyle;
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+
+        li {
+          background-color: #f8f8fa;
+          margin-top: 5px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 860px) {
+  .container {
+    .information {
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .address,
+      .contact {
+        width: 50%;
+      }
+      .nearbyPlaces {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    .information {
+      flex-direction: column;
+      align-items: center;
+      .address,
+      .contact {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .nearbyPlaces {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

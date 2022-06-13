@@ -1,0 +1,52 @@
+@mixin centerItems {
+  display: flex;
+  align-items: center;
+}
+@mixin nameSpace {
+  width: 30%;
+  margin: 0px 20px;
+}
+@mixin listContainer {
+  margin: 10px auto;
+  width: 90%;
+  text-align: left;
+}
+
+.container {
+  background-color: #f8f8fa;
+  padding-top: 40px;
+
+  .listHeader {
+    @include centerItems;
+    @include listContainer;
+    background-color: #fff;
+    color: #bd3786;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0px;
+    @include listContainer;
+
+    .business {
+      background-color: #fff;
+      margin-top: 5px;
+
+      .info {
+        @include centerItems;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f4f4f5;
+        }
+      }
+    }
+  }
+  .businessName {
+    @include nameSpace;
+  }
+
+  .businessDescription {
+    width: 70%;
+  }
+}
