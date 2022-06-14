@@ -11,7 +11,7 @@ const BusinessList = () => {
 
   const { isLoading, data } = useQuery("businesses", getBusinessesData);
 
-  const redirectToBussinesItem = (
+  const redirectToBusinessItem = (
     businessItem: BusinessType,
     businessesList: AxiosResponse
   ) => {
@@ -28,7 +28,7 @@ const BusinessList = () => {
       <li
         className="business"
         key={business.id}
-        onClick={() => redirectToBussinesItem(business, data.data)}
+        onClick={() => redirectToBusinessItem(business, data.data)}
       >
         <div className="info">
           <p className="businessName">{business.name}</p>

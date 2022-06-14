@@ -7,8 +7,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<BusinessList />} />
           <Route path="/businessItem" element={<BusinessItem />} />

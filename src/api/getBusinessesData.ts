@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useQuery } from "react-query";
 
 export const getBusinessesData = () => {
   return axios.get(
